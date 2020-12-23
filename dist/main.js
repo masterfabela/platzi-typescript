@@ -2,33 +2,39 @@
 console.log('Hola platzi world');
 // Number
 // Explicito
-var phone;
+let phone;
 phone = 1;
 phone = 342;
 // phone = 'Hola' // Error
 // Inferido
-var phoneNumber = 234;
+let phoneNumber = 234;
 phoneNumber = 23;
 // phoneNumber = true; // Error por tipo
-var hex = 0xf00d;
-var binary = 10;
-var octal = 10010;
+let hex = 0xf00d;
+let binary = 0b1010;
+let octal = 0o23432;
 // Tipo: Boolean
 // Tipado Explicito
-var isPro;
+let isPro;
 isPro = true;
 isPro = false;
 // isPro = 23
 //Inferido
-var isUserPro = false;
+let isUserPro = false;
 isUserPro = true;
 // isUserPro = 23; // Error
 // String
-var userName = 'luisAviles';
+let userName = 'luisAviles';
 userName = 'Luis';
 // userName = true; // Error
 // Template String
 // Uso de back-tick `
-var userInfo;
-userInfo = "\n    User Info:\n    username: " + userName + "\n    firstName: " + (userName + ' Aviles') + "\n    phone: " + phoneNumber + "\n    isPro: " + isPro + "\n";
+let userInfo;
+userInfo = `
+    User Info:
+    username: ${userName}
+    firstName: ${userName + ' Aviles'}
+    phone: ${phoneNumber}
+    isPro: ${isPro}
+`;
 console.log('userInfo', userInfo);

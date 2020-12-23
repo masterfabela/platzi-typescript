@@ -8,25 +8,29 @@ function showInfo(user) {
 showInfo({ id: 1, username: 'luixaviles', firstName: 'Luis' });
 // Tipo Inferido
 function showFormatedInfo(user) {
-    console.log('User Info', "\n        id: " + user.id + "\n        username: " + user.username + "\n        firstname: " + user.firstName + "\n    ");
+    console.log('User Info', `
+        id: ${user.id}
+        username: ${user.username}
+        firstname: ${user.firstName}
+    `);
 }
 showFormatedInfo({ id: 1, username: 'luixaviles', firstName: 'Luis' });
 // tipo void como tipo de dato en variable
-var unusable;
+let unusable;
 // unusable = null; // Error con modo estricto de datos
 unusable = undefined;
 // Tipo Never
 function handleError(code, message) {
     // Process your code here
     // Generate a message
-    throw new Error(message + ". Code: " + code);
+    throw new Error(`${message}. Code: ${code}`);
 }
 try {
     handleError(404, 'Not Found');
 }
 catch (error) { }
 function sumNumbers(limit) {
-    var sum = 0;
+    let sum = 0;
     while (true) {
         sum++;
     }
