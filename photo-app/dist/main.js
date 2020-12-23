@@ -1,9 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var photo_app_1 = require("./photo-app");
-var user = new photo_app_1.User(1, 'masterfabel', 'Jose Ramon', true);
-var album = new photo_app_1.Album(10, 'Platzi Pictures');
-var picture = new photo_app_1.Picture(1, 'Typescript Course', '2020-03', photo_app_1.PhotoOrientation.Landscape);
+const album_1 = require("./album");
+const photo_orientation_1 = require("./photo-orientation");
+const picture_1 = require("./picture");
+const user_1 = require("./user");
+const user = new user_1.User(1, 'masterfabel', 'Jose Ramon', true);
+const album = new album_1.Album(10, 'Platzi Pictures');
+const picture = new picture_1.Picture(1, 'Typescript Course', '2020-03', photo_orientation_1.PhotoOrientation.Landscape);
 user.addAlbum(album);
 album.addPicture(picture);
+console.log('USer', user);
+user.removeAlbum(album);
 console.log('USer', user);

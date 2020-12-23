@@ -13,7 +13,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.User = exports.Album = exports.Picture = exports.Item = exports.PhotoOrientation = void 0;
+exports.Album = exports.Picture = exports.PhotoOrientation = void 0;
+var item_1 = require("./item");
 var PhotoOrientation;
 (function (PhotoOrientation) {
     PhotoOrientation[PhotoOrientation["Landscape"] = 0] = "Landscape";
@@ -21,31 +22,6 @@ var PhotoOrientation;
     PhotoOrientation[PhotoOrientation["Square"] = 2] = "Square";
     PhotoOrientation[PhotoOrientation["Panorama"] = 3] = "Panorama"; // 3
 })(PhotoOrientation = exports.PhotoOrientation || (exports.PhotoOrientation = {}));
-var Item = /** @class */ (function () {
-    function Item(id, title) {
-        this._id = id;
-        this._title = title;
-    }
-    Object.defineProperty(Item.prototype, "id", {
-        get: function () {
-            return this._id;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Item.prototype, "title", {
-        get: function () {
-            return this._title;
-        },
-        set: function (title) {
-            this._title = title;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Item;
-}());
-exports.Item = Item;
 var Picture = /** @class */ (function (_super) {
     __extends(Picture, _super);
     function Picture(id, title, date, orientation) {
@@ -69,7 +45,7 @@ var Picture = /** @class */ (function (_super) {
     };
     Picture.photoOrientation = PhotoOrientation;
     return Picture;
-}(Item));
+}(item_1.Item));
 exports.Picture = Picture;
 var Album = /** @class */ (function (_super) {
     __extends(Album, _super);
@@ -82,19 +58,5 @@ var Album = /** @class */ (function (_super) {
         this._pictures.push(picture);
     };
     return Album;
-}(Item));
+}(item_1.Item));
 exports.Album = Album;
-var User = /** @class */ (function () {
-    function User(id, username, firstName, isPro) {
-        this.id = id;
-        this.username = username;
-        this.firstName = firstName;
-        this.isPro = isPro;
-        this.album = [];
-    }
-    User.prototype.addAlbum = function (album) {
-        this.album.push(album);
-    };
-    return User;
-}());
-exports.User = User;

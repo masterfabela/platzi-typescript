@@ -20,9 +20,6 @@ abstract class Item {
 	get id() {
 		return this._id;
 	}
-	// set id(newId: number) {
-	// 	this._id = newId;
-	// }
 
 	get title() {
 		return this._title;
@@ -35,7 +32,6 @@ abstract class Item {
 // get y set
 
 class Picture extends Item {
-	// Propiedades
 	public static photoOrientation = PhotoOrientation;
 	private _orientation: PhotoOrientation;
 
@@ -55,7 +51,6 @@ class Picture extends Item {
 		this._orientation = orientation;
 	}
 
-	// Comportamiento
 	public toString() {
 		return `[id: ${this.id},
              title: ${this.title},
