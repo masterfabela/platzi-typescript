@@ -15,6 +15,8 @@
 -   ¿Para qué nos sirven los enumerados en TypeScript?
 
     -   Numeros no
+    -   Constantes de varios tipos de datos no
 
 -   ¿Qué ocurre cuando se aplican las aserciones de tipo en TypeScript?
     -   Comprobacion especial no
+    -   comprobaciones en el codigo no
