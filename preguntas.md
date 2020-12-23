@@ -1,4 +1,4 @@
-# Preguntas falladas
+# Preguntas falladas 1
 
 -   ¿Cuál es la síntaxis para el uso de cadenas multilínea en TypeScript?
     -   `\n` no
